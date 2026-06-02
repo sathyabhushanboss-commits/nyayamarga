@@ -68,7 +68,7 @@ Her core competencies include legal research, contract drafting, litigation supp
     }
   ];
 
-  const interns = [
+  const interns: any[] = [
     {
       name: "Yasha Shree S.",
       image: "/ourteams/Yasha.jpeg",
@@ -288,7 +288,7 @@ Her core competencies include legal research, contract drafting, litigation supp
                       </div>
 
                       <div className="flex flex-wrap gap-2 mb-6">
-                        {intern.interests.map((interest, i) => (
+                        {intern.interests.map((interest: string, i: number) => (
                           <span key={i} className="text-xs bg-[#d4af37]/10 text-gray-300 px-3 py-1 rounded-full">
                             {interest}
                           </span>
@@ -299,7 +299,7 @@ Her core competencies include legal research, contract drafting, litigation supp
                         <p>{intern.description}</p>
                       </div>
 
-                      {"book" in intern && (
+                      {intern.book && (
                         <div className="mt-6 border border-[#d4af37]/20 rounded-xl p-4 bg-[#d4af37]/5">
                           <div className="flex items-center gap-2 mb-2">
                             <BookOpen size={16} className="text-[#d4af37]" />
@@ -307,11 +307,16 @@ Her core competencies include legal research, contract drafting, litigation supp
                               Published Author
                             </h4>
                           </div>
-                          <p className="text-white font-medium">{intern.book.title}</p>
+
+                          <p className="text-white font-medium">
+                            {intern.book?.title}
+                          </p>
+
                           <div className="mt-2 flex flex-wrap gap-3 text-xs text-gray-400">
-                            <span>ASIN: {intern.book.asin}</span>
-                            <span>Publisher: {intern.book.publisher}</span>
+                            <span>ASIN: {intern.book?.asin}</span>
+                            <span>Publisher: {intern.book?.publisher}</span>
                           </div>
+
                           <button className="mt-3 text-[#d4af37] text-sm flex items-center gap-1 hover:gap-2 transition-all">
                             View on Amazon <ExternalLink size={12} />
                           </button>

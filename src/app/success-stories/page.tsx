@@ -182,13 +182,13 @@ Our team demonstrated the lack of basis for exaggerated claims while acknowledgi
 ];
 
 export default function SuccessStories() {
-  const [selectedCase, setSelectedCase] = useState(null);
-  const [expandedFaq, setExpandedFaq] = useState({});
+  const [selectedCase, setSelectedCase] = useState<(typeof caseStudies)[0] | null>(null);
+  const [expandedFaq, setExpandedFaq] = useState<Record<number, boolean>>({});
 
-  const toggleFaq = (faqIndex) => {
-    setExpandedFaq(prev => ({
+  const toggleFaq = (faqIndex: number) => {
+    setExpandedFaq((prev) => ({
       ...prev,
-      [faqIndex]: !prev[faqIndex]
+      [faqIndex]: !prev[faqIndex],
     }));
   };
 
@@ -294,7 +294,7 @@ export default function SuccessStories() {
                       Case Overview
                     </h2>
                     <div className="text-gray-300 leading-relaxed space-y-3">
-                      {selectedCase.background.split('\n\n').map((para, i) => (
+                      {selectedCase.background.split("\n\n").map((para: string, i: number) => (
                         <p key={i}>{para}</p>
                       ))}
                     </div>
@@ -306,7 +306,7 @@ export default function SuccessStories() {
                       Our Approach
                     </h2>
                     <div className="text-gray-300 leading-relaxed space-y-3">
-                      {selectedCase.approach.split('\n\n').map((para, i) => (
+                      {selectedCase.approach.split("\n\n").map((para: string, i: number) => (
                         <p key={i}>{para}</p>
                       ))}
                     </div>
@@ -318,7 +318,7 @@ export default function SuccessStories() {
                       The Outcome
                     </h2>
                     <div className="text-gray-300 leading-relaxed space-y-3">
-                      {selectedCase.outcome.split('\n\n').map((para, i) => (
+                      {selectedCase.outcome.split("\n\n").map((para: string, i: number) => (
                         <p key={i}>{para}</p>
                       ))}
                     </div>
