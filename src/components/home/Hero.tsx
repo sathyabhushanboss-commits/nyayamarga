@@ -19,7 +19,38 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Desktop Video with Poster */}
+      {/* Elegant Loading Screen */}
+      {!videoLoaded && (
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a0808] via-[#2b0b0b] to-[#1a0808] flex items-center justify-center z-20">
+          <div className="text-center">
+            {/* Animated Scales of Justice */}
+            <div className="relative w-24 h-24 mx-auto mb-6">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-16 h-16 border-2 border-[#d4af37]/30 rounded-full animate-pulse"></div>
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center animate-swing">
+                <span className="text-5xl">⚖️</span>
+              </div>
+            </div>
+            
+            {/* Animated Title */}
+            <h2 className="text-[#d4af37] text-2xl md:text-3xl font-bold tracking-wider animate-pulse-slow">
+              NYAYAMARGA
+            </h2>
+            
+            {/* Loading Bar */}
+            <div className="w-48 md:w-64 h-[1px] bg-[#d4af37]/20 mx-auto mt-6 relative overflow-hidden">
+              <div className="absolute top-0 left-0 h-full w-1/2 bg-[#d4af37] animate-loading-bar"></div>
+            </div>
+            
+            <p className="text-[#d4af37]/60 text-xs tracking-widest mt-4 animate-pulse-slow">
+              Justice Is Our path
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Desktop Video */}
       <div className="absolute inset-0 hidden md:block">
         <video
           autoPlay
@@ -27,7 +58,6 @@ export default function Hero() {
           loop
           playsInline
           preload="metadata"
-          poster="/hero-poster.jpg"
           className={`w-full h-full object-cover transition-opacity duration-1000 ${
             videoLoaded ? "opacity-100" : "opacity-0"
           }`}
@@ -35,16 +65,9 @@ export default function Hero() {
         >
           <source src="/hero.mp4" type="video/mp4" />
         </video>
-        {/* Fallback background image while video loads */}
-        {!videoLoaded && (
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/hero-poster.jpg')" }}
-          />
-        )}
       </div>
 
-      {/* Mobile Video with Poster */}
+      {/* Mobile Video */}
       <div className="absolute inset-0 md:hidden">
         <video
           autoPlay
@@ -52,7 +75,6 @@ export default function Hero() {
           loop
           playsInline
           preload="metadata"
-          poster="/hero-poster-mobile.jpg"
           className={`w-full h-full object-cover transition-opacity duration-1000 ${
             videoLoaded ? "opacity-100" : "opacity-0"
           }`}
@@ -60,12 +82,6 @@ export default function Hero() {
         >
           <source src="/hero2.mp4" type="video/mp4" />
         </video>
-        {!videoLoaded && (
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/hero-poster-mobile.jpg')" }}
-          />
-        )}
       </div>
 
       {/* Dark Overlay */}
@@ -74,16 +90,6 @@ export default function Hero() {
           videoLoaded ? "opacity-100" : "opacity-0"
         }`}
       ></div>
-
-      {/* Loading Spinner */}
-      {!videoLoaded && (
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a0808] via-[#2b0b0b] to-[#1a0808] flex items-center justify-center z-20">
-          <div className="text-center">
-            <div className="w-12 h-12 border-3 border-[#d4af37] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-            <p className="text-[#d4af37] text-sm tracking-wider">Loading...</p>
-          </div>
-        </div>
-      )}
 
       {/* Content */}
       <div 
@@ -140,6 +146,37 @@ export default function Hero() {
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-t from-[#2b0b0b] to-transparent"></div>
+
+      <style jsx>{`
+        @keyframes swing {
+          0% { transform: rotate(0deg); }
+          25% { transform: rotate(5deg); }
+          75% { transform: rotate(-5deg); }
+          100% { transform: rotate(0deg); }
+        }
+        
+        @keyframes pulse-slow {
+          0%, 100% { opacity: 0.6; }
+          50% { opacity: 1; }
+        }
+        
+        @keyframes loading-bar {
+          0% { left: -50%; }
+          100% { left: 100%; }
+        }
+        
+        .animate-swing {
+          animation: swing 2s ease-in-out infinite;
+        }
+        
+        .animate-pulse-slow {
+          animation: pulse-slow 2s ease-in-out infinite;
+        }
+        
+        .animate-loading-bar {
+          animation: loading-bar 1.5s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 }
