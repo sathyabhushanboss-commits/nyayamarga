@@ -1,3 +1,4 @@
+// src/components/home/MapSection.tsx
 export default function MapSection() {
   return (
     <section className="py-16 bg-[#2b0b0b]">
@@ -19,6 +20,17 @@ export default function MapSection() {
             loading="lazy"
             className="border-0"
           />
+        </div>
+
+        <div className="text-center mt-8">
+          <a
+            href="https://maps.google.com/?q=Kogilu+Main+Road+Yelahanka+Bengaluru"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#d4af37] hover:text-[#f4d03f] transition-colors"
+          >
+            Get Directions on Google Maps →
+          </a>
         </div>
 
       </div>

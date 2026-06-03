@@ -1,3 +1,8 @@
+// src/components/home/ContactSection.tsx
+"use client";
+
+import Link from "next/link";
+
 export default function ContactSection() {
   return (
     <section id="contact" className="bg-[#1f0707] py-24">
@@ -51,7 +56,7 @@ export default function ContactSection() {
 
               <a
                 href="tel:+919353237692"
-                className="bg-[#d4af37] text-black px-6 py-3 rounded-md font-semibold"
+                className="bg-[#d4af37] text-black px-6 py-3 rounded-md font-semibold hover:bg-[#f4d03f] transition-all duration-300"
               >
                 Call Now
               </a>
@@ -60,10 +65,16 @@ export default function ContactSection() {
                 href="https://wa.me/919353237692"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-600 text-white px-6 py-3 rounded-md font-semibold"
+                className="bg-green-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-green-700 transition-all duration-300"
               >
                 WhatsApp
               </a>
+
+              <Link href="/contact">
+                <button className="border border-[#d4af37] text-[#d4af37] px-6 py-3 rounded-md font-semibold hover:bg-[#d4af37] hover:text-black transition-all duration-300">
+                  View Full Contact Page
+                </button>
+              </Link>
 
             </div>
 
@@ -82,6 +93,14 @@ export default function ContactSection() {
 
           </div>
 
+        </div>
+
+        <div className="text-center mt-12">
+          <Link href="/appointment">
+            <button className="bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#1a0808] font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+              Book a Consultation
+            </button>
+          </Link>
         </div>
 
       </div>

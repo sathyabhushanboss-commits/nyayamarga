@@ -1,3 +1,8 @@
+// src/components/home/AppointmentSection.tsx
+"use client";
+
+import Link from "next/link";
+
 export default function AppointmentSection() {
   return (
     <section id="appointment" className="bg-[#2b0b0b] py-24">
@@ -110,17 +115,19 @@ export default function AppointmentSection() {
 
           {/* Buttons */}
           <div className="flex flex-col md:flex-row gap-4 mt-8">
-            <button
-              type="submit"
-              className="bg-[#d4af37] text-black px-8 py-4 rounded-xl font-semibold hover:bg-[#f4d03f] transition-all duration-300 shadow-lg"
-            >
-              Book Consultation
-            </button>
+            <Link href="/appointment" className="flex-1">
+              <button
+                type="button"
+                className="w-full bg-[#d4af37] text-black px-8 py-4 rounded-xl font-semibold hover:bg-[#f4d03f] transition-all duration-300 shadow-lg"
+              >
+                Book Consultation
+              </button>
+            </Link>
             <a
               href="https://wa.me/919353237692"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-600 text-white px-8 py-4 rounded-xl font-semibold text-center hover:bg-green-700 transition-all duration-300 shadow-lg"
+              className="flex-1 bg-green-600 text-white px-8 py-4 rounded-xl font-semibold text-center hover:bg-green-700 transition-all duration-300 shadow-lg"
             >
               WhatsApp Us
             </a>

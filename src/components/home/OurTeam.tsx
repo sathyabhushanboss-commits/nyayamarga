@@ -1,4 +1,8 @@
+// src/components/home/OurTeam.tsx
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
 
 export default function OurTeam() {
   const advocates = [
@@ -60,9 +64,6 @@ export default function OurTeam() {
       role: "Legal Intern & Published Author",
       description:
         "Published author and legal intern with interests in legal research, analytical writing, contemporary legal studies, drafting, and academic contributions.",
-      book: "PHOENIXTERZ",
-      asin: "B0DCWFLBZ4",
-      publisher: "Notion Press",
     },
     {
       name: "Puneet V.",
@@ -136,13 +137,15 @@ export default function OurTeam() {
                   {member.role}
                 </p>
 
-                <p className="text-gray-300 text-xs sm:text-sm mt-3 sm:mt-4 leading-relaxed flex-grow">
+                <p className="text-gray-300 text-xs sm:text-sm mt-3 sm:mt-4 leading-relaxed flex-grow line-clamp-4">
                   {member.description}
                 </p>
 
-                <button className="mt-4 sm:mt-5 border border-[#d4af37] text-[#d4af37] px-3 sm:px-4 py-1.5 sm:py-2 rounded-md text-sm sm:text-base hover:bg-[#d4af37] hover:text-black transition-all duration-300 w-fit">
-                  View Profile
-                </button>
+                <Link href="/team">
+                  <button className="mt-4 sm:mt-5 border border-[#d4af37] text-[#d4af37] px-3 sm:px-4 py-1.5 sm:py-2 rounded-md text-sm sm:text-base hover:bg-[#d4af37] hover:text-black transition-all duration-300 w-full">
+                    View Profile
+                  </button>
+                </Link>
               </div>
             </div>
           ))}
@@ -183,32 +186,26 @@ export default function OurTeam() {
                   {intern.role}
                 </p>
 
-                <p className="text-gray-300 text-xs sm:text-sm mt-3 sm:mt-4 leading-relaxed flex-grow">
+                <p className="text-gray-300 text-xs sm:text-sm mt-3 sm:mt-4 leading-relaxed flex-grow line-clamp-4">
                   {intern.description}
                 </p>
 
-                {"book" in intern && (
-                  <div className="mt-4 border border-[#d4af37]/30 rounded-lg p-3 sm:p-4">
-                    <h4 className="text-[#d4af37] font-semibold text-sm sm:text-base">
-                      Published Author
-                    </h4>
-
-                    <p className="text-white mt-2 text-sm sm:text-base">
-                      {intern.book}
-                    </p>
-
-                    <p className="text-gray-400 text-xs sm:text-sm mt-1">
-                      ASIN: {intern.asin}
-                    </p>
-
-                    <p className="text-gray-400 text-xs sm:text-sm">
-                      Publisher: {intern.publisher}
-                    </p>
-                  </div>
-                )}
+                <Link href="/team">
+                  <button className="mt-4 sm:mt-5 border border-[#d4af37] text-[#d4af37] px-3 sm:px-4 py-1.5 sm:py-2 rounded-md text-sm sm:text-base hover:bg-[#d4af37] hover:text-black transition-all duration-300 w-full">
+                    View Profile
+                  </button>
+                </Link>
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <Link href="/team">
+            <button className="bg-[#d4af37] text-black px-8 py-3 rounded-md font-semibold hover:bg-[#f4d03f] transition-all duration-300">
+              Meet Our Full Team
+            </button>
+          </Link>
         </div>
       </div>
     </section>
