@@ -37,34 +37,7 @@ export default function OurTeam() {
   ];
 
   const interns = [
-    {
-      name: "Yasha Shree S.",
-      image: "/ourteams/Yasha.jpeg",
-      role: "Legal Intern",
-      description:
-        "Dedicated legal intern with strong interest in civil litigation, dispute resolution, mediation, legal drafting, legal research, and case analysis.",
-    },
-    {
-      name: "Pranav A.M.",
-      image: "/ourteams/Pranav.jpeg",
-      role: "Legal Intern",
-      description:
-        "Committed legal intern with interests in corporate law, litigation practice, compliance matters, drafting, and practical legal problem-solving.",
-    },
-    {
-      name: "Divya Krishnan",
-      image: "/ourteams/Divya.jpeg",
-      role: "Legal Intern & Teaching Assistant",
-      description:
-        "Research-oriented legal intern and Teaching Assistant with interests in environmental law, marine environmental law, international legal frameworks, and academic legal research.",
-    },
-    {
-      name: "Samhita Kulkarni",
-      image: "/ourteams/Samhita.jpeg",
-      role: "Legal Intern & Published Author",
-      description:
-        "Published author and legal intern with interests in legal research, analytical writing, contemporary legal studies, drafting, and academic contributions.",
-    },
+    
     {
       name: "Puneet V.",
       image: "/ourteams/puneet.jpeg",
@@ -92,6 +65,34 @@ export default function OurTeam() {
       role: "Legal Intern",
       description:
         "Legal intern with strong focus on real estate law, title verification, documentation, contract review, property transactions, and compliance.",
+    },
+    {
+      name: "Yasha Shree S.",
+      image: "/ourteams/Yasha.jpeg",
+      role: "Legal Intern",
+      description:
+        "Dedicated legal intern with strong interest in civil litigation, dispute resolution, mediation, legal drafting, legal research, and case analysis.",
+    },
+    {
+      name: "Pranav A.M.",
+      image: "/ourteams/Pranav.jpeg",
+      role: "Legal Intern",
+      description:
+        "Committed legal intern with interests in corporate law, litigation practice, compliance matters, drafting, and practical legal problem-solving.",
+    },
+    {
+      name: "Divya Krishnan",
+      image: "/ourteams/Divya.jpeg",
+      role: "Legal Intern & Teaching Assistant",
+      description:
+        "Research-oriented legal intern and Teaching Assistant with interests in environmental law, marine environmental law, international legal frameworks, and academic legal research.",
+    },
+    {
+      name: "Samhita Kulkarni",
+      image: "/ourteams/Samhita.jpeg",
+      role: "Legal Intern & Published Author",
+      description:
+        "Published author and legal intern with interests in legal research, analytical writing, contemporary legal studies, drafting, and academic contributions.",
     },
   ];
 

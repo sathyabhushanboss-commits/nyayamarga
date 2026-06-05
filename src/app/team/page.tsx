@@ -69,6 +69,35 @@ Her core competencies include legal research, contract drafting, litigation supp
   ];
 
   const interns: any[] = [
+    
+    {
+      name: "Puneet V.",
+      image: "/ourteams/puneet.jpeg",
+      role: "Legal Intern",
+      description: `Puneet V. is a legal intern currently pursuing his five-year BBA LLB from PES University, Bangalore. With a keen interest in litigation, legal research, and drafting, he has actively contributed to case analysis, document preparation, and client-focused assignments. Puneet's dedication to learning is complemented by his strong analytical skills and attention to detail. As he continues to hone his advocacy skills, he is passionate about civil, criminal, and corporate law, striving to become a well-rounded legal professional.`,
+      interests: ["Litigation", "Legal Research", "Drafting", "Corporate Law"]
+    },
+    {
+      name: "Prerana Madhukar Bhatt",
+      image: "/ourteams/Prerana.jpeg",
+      role: "Legal Intern",
+      description: `Prerana Madhukar Bhatt is a bright and accomplished legal intern, recognized for her academic excellence and active participation in co-curricular activities. Pursuing her BBA LLB at PES University, Bangalore, she excels in legal research, drafting, and moot court competitions. With a keen eye for detail and a passion for advocacy, she balances her academic success with leadership and community involvement, aiming to build a well-rounded legal career.`,
+      interests: ["Legal Research", "Drafting", "Moot Courts", "Leadership"]
+    },
+    {
+      name: "Rohan Adithya",
+      image: "/ourteams/Rohan.jpeg",
+      role: "Legal Intern",
+      description: `Rohan Adithya is a diligent legal intern contributing to our law chambers with curiosity and determination. He is currently pursuing his legal studies while immersing himself in practical aspects of litigation and corporate law. Rohan has engaged in legal drafting, case preparation, and research assignments, bringing a thoughtful perspective to each task. Beyond academics, he has shown enthusiasm for teamwork and problem-solving, always eager to expand his expertise in diverse areas of law. His dedication to learning and adaptability make him a promising future legal practitioner.`,
+      interests: ["Drafting", "Case Preparation", "Litigation Support", "Corporate Law"]
+    },
+    {
+      name: "Anil Kumar V.",
+      image: "/ourteams/Anil.jpeg",
+      role: "Legal Intern",
+      description: `Anil Kumar V is a legal intern with a distinct focus on real estate matters, bringing both legal insight and practical market awareness to the table. While immersed in his legal studies, he has honed his expertise in property law, assisting in title verifications, documentation, and contract review. His dual passion for legal intricacies and real estate dealings positions him as a valuable resource. Anil's analytical mindset and practical approach ensure that both legal compliance and business goals align in the realm of property law.`,
+      interests: ["Real Estate Law", "Title Verification", "Contract Review", "Compliance"]
+    }
     {
       name: "Yasha Shree S.",
       image: "/ourteams/Yasha.jpeg",
@@ -102,34 +131,6 @@ Her core competencies include legal research, contract drafting, litigation supp
         publisher: "Notion Press"
       }
     },
-    {
-      name: "Puneet V.",
-      image: "/ourteams/puneet.jpeg",
-      role: "Legal Intern",
-      description: `Puneet V. is a legal intern currently pursuing his five-year BBA LLB from PES University, Bangalore. With a keen interest in litigation, legal research, and drafting, he has actively contributed to case analysis, document preparation, and client-focused assignments. Puneet's dedication to learning is complemented by his strong analytical skills and attention to detail. As he continues to hone his advocacy skills, he is passionate about civil, criminal, and corporate law, striving to become a well-rounded legal professional.`,
-      interests: ["Litigation", "Legal Research", "Drafting", "Corporate Law"]
-    },
-    {
-      name: "Prerana Madhukar Bhatt",
-      image: "/ourteams/Prerana.jpeg",
-      role: "Legal Intern",
-      description: `Prerana Madhukar Bhatt is a bright and accomplished legal intern, recognized for her academic excellence and active participation in co-curricular activities. Pursuing her BBA LLB at PES University, Bangalore, she excels in legal research, drafting, and moot court competitions. With a keen eye for detail and a passion for advocacy, she balances her academic success with leadership and community involvement, aiming to build a well-rounded legal career.`,
-      interests: ["Legal Research", "Drafting", "Moot Courts", "Leadership"]
-    },
-    {
-      name: "Rohan Adithya",
-      image: "/ourteams/Rohan.jpeg",
-      role: "Legal Intern",
-      description: `Rohan Adithya is a diligent legal intern contributing to our law chambers with curiosity and determination. He is currently pursuing his legal studies while immersing himself in practical aspects of litigation and corporate law. Rohan has engaged in legal drafting, case preparation, and research assignments, bringing a thoughtful perspective to each task. Beyond academics, he has shown enthusiasm for teamwork and problem-solving, always eager to expand his expertise in diverse areas of law. His dedication to learning and adaptability make him a promising future legal practitioner.`,
-      interests: ["Drafting", "Case Preparation", "Litigation Support", "Corporate Law"]
-    },
-    {
-      name: "Anil Kumar V.",
-      image: "/ourteams/Anil.jpeg",
-      role: "Legal Intern",
-      description: `Anil Kumar V is a legal intern with a distinct focus on real estate matters, bringing both legal insight and practical market awareness to the table. While immersed in his legal studies, he has honed his expertise in property law, assisting in title verifications, documentation, and contract review. His dual passion for legal intricacies and real estate dealings positions him as a valuable resource. Anil's analytical mindset and practical approach ensure that both legal compliance and business goals align in the realm of property law.`,
-      interests: ["Real Estate Law", "Title Verification", "Contract Review", "Compliance"]
-    }
   ];
 
   const fadeInLeft = {
