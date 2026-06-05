@@ -318,10 +318,7 @@ Her core competencies include legal research, contract drafting, litigation supp
                             <span>Publisher: {intern.book?.publisher}</span>
                           </div>
 
-                          <button className="mt-3 text-[#d4af37] text-sm flex items-center gap-1 hover:gap-2 transition-all">
-                            View on Amazon <ExternalLink size={12} />
-                          </button>
-                        </div>
+                                                 </div>
                       )}
                     </div>
                   </div>
