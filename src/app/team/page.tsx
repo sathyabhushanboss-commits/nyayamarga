@@ -97,7 +97,7 @@ Her core competencies include legal research, contract drafting, litigation supp
       role: "Legal Intern",
       description: `Anil Kumar V is a legal intern with a distinct focus on real estate matters, bringing both legal insight and practical market awareness to the table. While immersed in his legal studies, he has honed his expertise in property law, assisting in title verifications, documentation, and contract review. His dual passion for legal intricacies and real estate dealings positions him as a valuable resource. Anil's analytical mindset and practical approach ensure that both legal compliance and business goals align in the realm of property law.`,
       interests: ["Real Estate Law", "Title Verification", "Contract Review", "Compliance"]
-    }
+    },
     {
       name: "Yasha Shree S.",
       image: "/ourteams/Yasha.jpeg",
