@@ -4,6 +4,7 @@ import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 import { motion } from "framer-motion";
 import { Scale, Gavel, Shield, Target, Eye, BookOpen, MapPin, Calendar, Award } from "lucide-react";
+import Image from "next/image";
 
 export default function AboutPage() {
   const fadeInUp = {
@@ -19,6 +20,18 @@ export default function AboutPage() {
       }
     }
   };
+
+  // Image array for marquee
+  const marqueeImages = [
+    { src: "/1.jpeg", alt: "Law Office Interior 1" },
+    { src: "/2.jpeg", alt: "Law Office Interior 2" },
+    { src: "/3.jpeg", alt: "Legal Team" },
+    { src: "/4.jpeg", alt: "Courtroom Setting" },
+    { src: "/5.jpeg", alt: "Law Library" },
+  ];
+
+  // Double the array for seamless loop
+  const duplicatedImages = [...marqueeImages, ...marqueeImages];
 
   return (
     <>
@@ -63,6 +76,61 @@ export default function AboutPage() {
               className="h-1 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mx-auto mt-8"
             ></motion.div>
           </motion.div>
+
+          {/* Image Marquee Section - Smooth Loop */}
+          <motion.section
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mb-20 overflow-hidden"
+          >
+            <div className="relative">
+              {/* Gradient Overlays for smooth fade edges */}
+              <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#1a0808] to-transparent z-10 pointer-events-none"></div>
+              <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#1a0808] to-transparent z-10 pointer-events-none"></div>
+              
+              {/* Marquee Container */}
+              <div className="relative overflow-hidden py-8">
+                <motion.div
+                  animate={{
+                    x: ["0%", "-50%"],
+                  }}
+                  transition={{
+                    duration: 25,
+                    repeat: Infinity,
+                    ease: "linear",
+                    repeatType: "loop",
+                  }}
+                  className="flex gap-6 w-max"
+                >
+                  {duplicatedImages.map((image, index) => (
+                    <div
+                      key={index}
+                      className="relative group flex-shrink-0 w-80 h-64 rounded-xl overflow-hidden shadow-xl border border-[#d4af37]/30 hover:border-[#d4af37]/60 transition-all duration-300 hover:scale-105"
+                    >
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        sizes="(max-width: 768px) 320px, 320px"
+                      />
+                    </div>
+                  ))}
+                </motion.div>
+              </div>
+            </div>
+
+            {/* Decorative caption */}
+            <div className="text-center mt-6">
+              <p className="text-[#d4af37]/70 text-sm uppercase tracking-wider flex items-center justify-center gap-2">
+                <span className="w-8 h-px bg-[#d4af37]/50"></span>
+                Our Practice & Environment
+                <span className="w-8 h-px bg-[#d4af37]/50"></span>
+              </p>
+            </div>
+          </motion.section>
 
           {/* Firm Overview Card */}
           <motion.section
