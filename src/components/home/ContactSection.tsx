@@ -95,13 +95,7 @@ export default function ContactSection() {
 
         </div>
 
-        <div className="text-center mt-12">
-          <Link href="/appointment">
-            <button className="bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#1a0808] font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-              Book a Consultation
-            </button>
-          </Link>
-        </div>
+        
 
       </div>
     </section>
