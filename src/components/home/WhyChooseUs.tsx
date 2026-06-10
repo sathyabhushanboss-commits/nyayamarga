@@ -1,3 +1,4 @@
+// src/components/home/WhyChooseUs.tsx
 export default function WhyChooseUs() {
   const points = [
     "Client-Centric Legal Solutions",
@@ -31,7 +32,7 @@ export default function WhyChooseUs() {
           {points.map((point, index) => (
             <div
               key={index}
-              className="bg-[#2b0b0b] border border-[#d4af37]/30 rounded-xl p-6 hover:border-[#d4af37] transition"
+              className="bg-[#2b0b0b] border border-[#d4af37]/30 rounded-xl p-6 hover:border-[#d4af37] transition-all duration-300 hover:-translate-y-1"
             >
               <div className="text-[#d4af37] text-3xl mb-4">⚖</div>
 

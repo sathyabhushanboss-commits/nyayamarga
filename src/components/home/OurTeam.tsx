@@ -37,7 +37,6 @@ export default function OurTeam() {
   ];
 
   const interns = [
-    
     {
       name: "Puneet V.",
       image: "/ourteams/puneet.jpeg",
@@ -124,7 +123,7 @@ export default function OurTeam() {
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
                 />
               </div>
@@ -173,7 +172,7 @@ export default function OurTeam() {
                   src={intern.image}
                   alt={intern.name}
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
                 />
               </div>
