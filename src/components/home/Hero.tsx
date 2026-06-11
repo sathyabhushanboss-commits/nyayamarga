@@ -63,7 +63,7 @@ export default function Hero() {
           }`}
           onLoadedData={() => setVideoLoaded(true)}
         >
-          <source src="/hero.mp4" type="video/mp4" />
+          <source src="/hero.webm" type="video/webm" />
         </video>
       </div>
 
@@ -80,7 +80,7 @@ export default function Hero() {
           }`}
           onLoadedData={() => setVideoLoaded(true)}
         >
-          <source src="/hero2.mp4" type="video/mp4" />
+          <source src="/hero2.webm" type="video/webm" />
         </video>
       </div>
 
