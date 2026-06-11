@@ -90,7 +90,7 @@ export default function AboutPage() {
             ></motion.div>
           </motion.div>
 
-          {/* Image Marquee Section - Smooth Loop */}
+          {/* Image Gallery Section - Marquee on Desktop, 2-Column Grid on Mobile */}
           <motion.section
             variants={fadeInUp}
             initial="initial"
@@ -108,8 +108,8 @@ export default function AboutPage() {
                 </h2>
               </div>
 
-              {/* Marquee Container */}
-              <div className="relative w-full overflow-hidden">
+              {/* Desktop Marquee (hidden on mobile) */}
+              <div className="hidden md:block relative w-full overflow-hidden">
                 <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#3b0f0f]/90 to-transparent z-10 pointer-events-none"></div>
                 <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#3b0f0f]/90 to-transparent z-10 pointer-events-none"></div>
 
@@ -142,6 +142,22 @@ export default function AboutPage() {
                     </div>
                   ))}
                 </div>
+              </div>
+
+              {/* Mobile Grid Layout (2 columns) */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:hidden">
+                {marqueeImages.map((src, index) => (
+                  <div
+                    key={`mobile-${index}`}
+                    className="rounded-xl overflow-hidden shadow-xl border border-[#d4af37]/30 hover:border-[#d4af37]/70 transition-all duration-300 aspect-[4/3]"
+                  >
+                    <img
+                      src={src}
+                      alt={`Gallery image ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </motion.section>
