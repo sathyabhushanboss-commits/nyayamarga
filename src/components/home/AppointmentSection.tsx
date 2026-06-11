@@ -7,6 +7,11 @@ import { useState } from "react";
 export default function AppointmentSection() {
   const [selectedDate, setSelectedDate] = useState("");
 
+  // Format date for display (optional, but keeps input value as YYYY-MM-DD)
+  const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedDate(e.target.value);
+  };
+
   return (
     <section id="appointment" className="bg-[#2b0b0b] py-16 md:py-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
@@ -74,17 +79,19 @@ export default function AppointmentSection() {
               </select>
             </div>
 
-            {/* Preferred Date - with calendar picker */}
-            <div>
+            {/* Preferred Date - with calendar picker and responsive styling */}
+            <div className="w-full overflow-visible">
               <label className="block text-[#d4af37] mb-2 md:mb-3 font-medium text-sm md:text-base">
                 Preferred Date
               </label>
-              <input
-                type="date"
-                value={selectedDate}
-                onChange={(e) => setSelectedDate(e.target.value)}
-                className="w-full bg-[#3b0707] border border-[#d4af37]/30 rounded-xl px-4 md:px-5 py-3 md:py-4 text-white focus:outline-none focus:border-[#d4af37] focus:ring-2 focus:ring-[#d4af37]/20 text-sm md:text-base [&::-webkit-calendar-picker-indicator]:filter [&::-webkit-calendar-picker-indicator]:invert [&::-webkit-calendar-picker-indicator]:opacity-70 [&::-webkit-calendar-picker-indicator]:hover:opacity-100"
-              />
+              <div className="relative w-full">
+                <input
+                  type="date"
+                  value={selectedDate}
+                  onChange={handleDateChange}
+                  className="w-full bg-[#3b0707] border border-[#d4af37]/30 rounded-xl px-4 md:px-5 py-3 md:py-4 text-white focus:outline-none focus:border-[#d4af37] focus:ring-2 focus:ring-[#d4af37]/20 text-sm md:text-base [&::-webkit-calendar-picker-indicator]:cursor-pointer [&::-webkit-calendar-picker-indicator]:bg-white/20 [&::-webkit-calendar-picker-indicator]:p-1 [&::-webkit-calendar-picker-indicator]:rounded [&::-webkit-calendar-picker-indicator]:hover:bg-white/30 [&::-webkit-datetime-edit-month-field]:text-white [&::-webkit-datetime-edit-day-field]:text-white [&::-webkit-datetime-edit-year-field]:text-white [&::-webkit-datetime-edit-text]:text-white/70"
+                />
+              </div>
             </div>
 
             {/* Preferred Time */}
