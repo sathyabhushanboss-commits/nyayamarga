@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -92,6 +93,35 @@ export default function Footer() {
               />
               <p className="text-gray-500 text-xs mt-2">Scan to download brochure</p>
               <p className="text-gray-500 text-xs">No sign up required</p>
+            </div>
+
+            {/* Social Media */}
+            <div className="mt-6">
+              <h5 className="text-[#d4af37] font-medium mb-3">
+                Follow Us
+              </h5>
+
+              <div className="flex justify-center md:justify-start gap-3">
+                <a
+                  href="https://www.linkedin.com/company/nyayamarga-law-chambers/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full border border-[#d4af37]/30 flex items-center justify-center text-gray-400 hover:text-[#d4af37] hover:border-[#d4af37] transition-all duration-300"
+                  aria-label="LinkedIn"
+                >
+                  <FaLinkedinIn size={18} />
+                </a>
+
+                <a
+                  href="https://www.instagram.com/nyayamargalaw/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full border border-[#d4af37]/30 flex items-center justify-center text-gray-400 hover:text-[#d4af37] hover:border-[#d4af37] transition-all duration-300"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram size={18} />
+                </a>
+              </div>
             </div>
           </div>
         </div>
