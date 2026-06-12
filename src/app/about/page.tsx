@@ -37,7 +37,6 @@ export default function AboutPage() {
     "/12.jpeg",
     "/13.jpeg",
     "/14.jpeg"
-
   ];
 
   // Core Values data
