@@ -77,6 +77,7 @@ export default function Footer() {
                 Yelahanka,
                 Bengaluru - 560064
               </p>
+              <p>+91 9738641129</p>
               <p>+91 9353237692</p>
               <p>contact.nyayamarga@gmail.com</p>
               <p>legal@nyayamarga.com</p>
